@@ -1,0 +1,32 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <h1>แปลงตัวเลขเป็นตัวอักษร</h1>
+  <script>
+    function convertNumberToWords() 
+    {
+      const numberWords = ['zero','one','two','three','four','five','six','seven','eight','nine'];
+      let input = document.getElementById("numberInput").value;
+      let result = "";
+
+      for (let digit of input) 
+      {
+        if (!isNaN(digit)) 
+        {
+          result += numberWords[parseInt(digit)] + ",";
+        }
+      }
+
+      result = result.slice(0, -1); 
+      document.getElementById("output").innerText = input + " = " + result;
+    }
+  </script>
+    </head>
+    <body>
+        <h3>กรุณาใส่ตัวเลข</h3>
+        <input type="text" id="numberInput" />
+        <button onclick="convertNumberToWords()">แสดง</button>
+        <p id="output"></p>
+    </body>
+</html>

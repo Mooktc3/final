@@ -1,0 +1,21 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <h1>เวลา</h1>
+    <body>
+        <h2>กรอกเวลา (hh:mm:ss)</h2>
+        <input type="text" id="timeInput" placeholder="เช่น 13:35:05">
+        <button onclick="convertTime()">แสดงผล</button>
+        <p id="result"></p>
+        <script>
+          function convertTime() 
+          {
+            const input = document.getElementById("timeInput").value;
+            const [hh, mm, ss] = input.split(":");
+            document.getElementById("result").innerText = 
+              hh + " นาฬิกา " + mm + " นาที " + ss + " วินาที";
+          }
+        </script>
+      </body>
+</html>
