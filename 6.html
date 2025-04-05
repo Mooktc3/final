@@ -1,0 +1,24 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>สูตรจากรหัส</h1>
+        <input id="num" placeholder="กรอกรหัส" />
+        <button onclick="gen()">แสดงผล</button>
+        <pre id="output"></pre>
+    
+        <script>
+            function gen() 
+            {
+                let num = document.getElementById("num").value;
+                let p = parseInt(num.slice(-2)); 
+                let output = "";
+                for (let i = 1; i <= 15; i++) {
+                    output += p + " x " + i + " = " + (p * i) + "\n";
+                }
+                document.getElementById("output").textContent = output;
+            }
+        </script>
+    </body>
+</html>
